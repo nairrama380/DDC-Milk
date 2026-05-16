@@ -15,7 +15,6 @@
     --blue-light: #2D5F8A;
     --gold: #C8922A;
     --gold-light: #F0B84B;
-    --red: #C0392B;
     --text: #1C1C1C;
     --muted: #7A7060;
     --border: #E8DDD0;
@@ -30,7 +29,6 @@
     overflow-x: hidden;
   }
 
-  /* HERO */
   header {
     background: var(--blue);
     position: relative;
@@ -51,9 +49,7 @@
     position: relative; z-index: 2;
   }
 
-  .logo {
-    display: flex; align-items: center; gap: 12px;
-  }
+  .logo { display: flex; align-items: center; gap: 12px; }
 
   .logo-badge {
     width: 44px; height: 44px;
@@ -61,22 +57,24 @@
     border-radius: 50%;
     display: flex; align-items: center; justify-content: center;
     font-family: 'Playfair Display', serif;
-    font-weight: 900; font-size: 18px;
+    font-weight: 900; font-size: 15px;
     color: white;
   }
 
-  .logo-text {
+  .logo-name {
     font-family: 'Playfair Display', serif;
-    font-size: 20px; font-weight: 700;
-    color: white;
-    line-height: 1.1;
+    font-size: 19px; font-weight: 700;
+    color: white; line-height: 1.1;
   }
-
-  .logo-text span { color: var(--gold-light); display: block; font-size: 11px; font-family: 'DM Sans', sans-serif; font-weight: 300; letter-spacing: 2px; text-transform: uppercase; }
+  .logo-name span {
+    color: var(--gold-light); display: block;
+    font-size: 11px; font-family: 'DM Sans', sans-serif;
+    font-weight: 300; letter-spacing: 2px; text-transform: uppercase;
+  }
 
   .nav-cta {
-    background: var(--gold);
-    color: white; border: none; padding: 10px 24px;
+    background: var(--gold); color: white;
+    border: none; padding: 10px 24px;
     border-radius: 4px; font-family: 'DM Sans', sans-serif;
     font-size: 14px; font-weight: 500; cursor: pointer;
     text-decoration: none; transition: background 0.2s;
@@ -92,15 +90,11 @@
 
   .hero-text h1 {
     font-family: 'Playfair Display', serif;
-    font-size: clamp(38px, 5vw, 64px);
+    font-size: clamp(36px, 5vw, 60px);
     font-weight: 900; color: white;
     line-height: 1.1; margin-bottom: 20px;
   }
-
-  .hero-text h1 em {
-    color: var(--gold-light); font-style: normal;
-    display: block;
-  }
+  .hero-text h1 em { color: var(--gold-light); font-style: normal; display: block; }
 
   .hero-text p {
     color: rgba(255,255,255,0.7);
@@ -108,10 +102,7 @@
     max-width: 420px; margin-bottom: 32px;
   }
 
-  .hero-badges {
-    display: flex; gap: 12px; flex-wrap: wrap;
-  }
-
+  .hero-badges { display: flex; gap: 12px; flex-wrap: wrap; }
   .badge {
     background: rgba(255,255,255,0.1);
     border: 1px solid rgba(255,255,255,0.2);
@@ -119,159 +110,90 @@
     border-radius: 100px; font-size: 13px;
   }
 
-  .hero-visual {
-    display: flex; justify-content: center; align-items: center;
-  }
+  .hero-visual { display: flex; justify-content: center; align-items: center; }
 
-  .milk-illustration {
-    width: 280px; height: 280px;
+  .milk-circle {
+    width: 260px; height: 260px;
     background: radial-gradient(circle at 40% 35%, rgba(255,255,255,0.15), transparent 60%),
                 linear-gradient(145deg, #2563a8, #1A3A5C);
     border-radius: 50%;
     display: flex; align-items: center; justify-content: center;
     box-shadow: 0 0 80px rgba(200,146,42,0.3), inset 0 0 40px rgba(255,255,255,0.05);
-    position: relative;
+    font-size: 90px;
     animation: float 4s ease-in-out infinite;
   }
-
   @keyframes float {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-12px); }
   }
 
-  .milk-illustration::before {
-    content: '🥛';
-    font-size: 100px;
-  }
-
-  .milk-drops {
-    position: absolute;
-    width: 12px; height: 12px;
-    background: var(--gold-light);
-    border-radius: 50%;
-    animation: drop 3s ease-in-out infinite;
-  }
-  .milk-drops:nth-child(1) { top: 10%; right: 15%; animation-delay: 0s; }
-  .milk-drops:nth-child(2) { bottom: 20%; left: 10%; animation-delay: 1s; width: 8px; height: 8px; }
-  .milk-drops:nth-child(3) { top: 60%; right: 5%; animation-delay: 2s; width: 6px; height: 6px; }
-
-  @keyframes drop {
-    0%, 100% { opacity: 0.3; transform: scale(1); }
-    50% { opacity: 1; transform: scale(1.4); }
-  }
-
-  /* SECTION */
   section { padding: 72px 48px; }
-
   .section-label {
     font-size: 11px; font-weight: 500; letter-spacing: 3px;
-    text-transform: uppercase; color: var(--gold);
-    margin-bottom: 12px;
+    text-transform: uppercase; color: var(--gold); margin-bottom: 12px;
   }
-
   .section-title {
     font-family: 'Playfair Display', serif;
-    font-size: clamp(28px, 3vw, 40px);
-    font-weight: 700; color: var(--blue);
-    margin-bottom: 40px;
+    font-size: clamp(26px, 3vw, 38px);
+    font-weight: 700; color: var(--blue); margin-bottom: 40px;
   }
 
-  /* PRODUCTS */
   #products { background: var(--milk); }
-
-  .category-tabs {
-    display: flex; gap: 8px; flex-wrap: wrap;
-    margin-bottom: 36px;
-  }
-
-  .tab {
-    padding: 8px 20px; border-radius: 100px;
-    border: 1.5px solid var(--border);
-    background: transparent; cursor: pointer;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 13px; font-weight: 500;
-    color: var(--muted); transition: all 0.2s;
-  }
-  .tab.active, .tab:hover {
-    background: var(--blue); border-color: var(--blue);
-    color: white;
-  }
 
   .products-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
     gap: 20px;
   }
 
   .product-card {
     background: white;
-    border-radius: 12px;
-    border: 1.5px solid var(--border);
-    padding: 20px;
+    border-radius: 14px;
+    border: 2px solid var(--border);
+    padding: 24px 20px 20px;
     transition: all 0.25s;
-    cursor: pointer;
     position: relative;
     overflow: hidden;
   }
-
   .product-card:hover {
     border-color: var(--blue-light);
     transform: translateY(-4px);
     box-shadow: 0 12px 32px rgba(26,58,92,0.12);
   }
-
   .product-card.selected {
     border-color: var(--blue);
-    background: #F0F6FF;
+    background: #EEF4FF;
   }
-
   .product-card.selected::after {
     content: '✓';
-    position: absolute; top: 10px; right: 10px;
+    position: absolute; top: 12px; right: 12px;
     width: 22px; height: 22px;
     background: var(--blue); color: white;
     border-radius: 50%; font-size: 12px;
     display: flex; align-items: center; justify-content: center;
   }
 
-  .product-emoji { font-size: 36px; margin-bottom: 12px; display: block; }
+  .product-emoji { font-size: 42px; margin-bottom: 14px; display: block; }
+  .product-name { font-weight: 600; font-size: 16px; color: var(--text); margin-bottom: 6px; }
+  .product-desc { font-size: 12px; color: var(--muted); margin-bottom: 16px; line-height: 1.6; }
 
-  .product-name {
-    font-weight: 500; font-size: 15px;
-    color: var(--text); margin-bottom: 4px;
-  }
+  .product-footer { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+  .product-price-block {}
+  .product-price { font-weight: 700; color: var(--blue); font-size: 17px; }
+  .product-unit { font-size: 11px; color: var(--muted); margin-top: 2px; }
 
-  .product-desc {
-    font-size: 12px; color: var(--muted);
-    margin-bottom: 12px; line-height: 1.5;
-  }
-
-  .product-footer {
-    display: flex; align-items: center; justify-content: space-between;
-  }
-
-  .product-price {
-    font-weight: 700; color: var(--blue);
-    font-size: 15px;
-  }
-
-  .qty-control {
-    display: flex; align-items: center; gap: 8px;
-  }
-
+  .qty-control { display: flex; align-items: center; gap: 8px; }
   .qty-btn {
-    width: 26px; height: 26px;
-    border-radius: 50%; border: 1.5px solid var(--border);
-    background: white; cursor: pointer; font-size: 16px;
+    width: 30px; height: 30px;
+    border-radius: 50%; border: 2px solid var(--border);
+    background: white; cursor: pointer; font-size: 18px;
     display: flex; align-items: center; justify-content: center;
     color: var(--blue); transition: all 0.15s;
     font-weight: 700; line-height: 1;
   }
   .qty-btn:hover { background: var(--blue); color: white; border-color: var(--blue); }
+  .qty-num { font-weight: 700; font-size: 15px; min-width: 20px; text-align: center; }
 
-  .qty-num { font-weight: 600; font-size: 14px; min-width: 16px; text-align: center; }
-
-  /* CART SUMMARY */
   #cart-bar {
     position: fixed; bottom: 0; left: 0; right: 0;
     background: var(--blue);
@@ -280,16 +202,14 @@
     z-index: 100; box-shadow: 0 -4px 24px rgba(0,0,0,0.2);
     animation: slideUp 0.3s ease;
   }
-
   @keyframes slideUp {
     from { transform: translateY(100%); }
     to { transform: translateY(0); }
   }
-
   #cart-bar.visible { display: flex; }
 
-  .cart-summary { font-size: 14px; }
-  .cart-summary strong { font-size: 18px; margin-left: 8px; color: var(--gold-light); }
+  .cart-info { font-size: 14px; }
+  .cart-info strong { font-size: 20px; margin-left: 10px; color: var(--gold-light); }
 
   .cart-btn {
     background: var(--gold); color: white;
@@ -300,71 +220,73 @@
   }
   .cart-btn:hover { background: var(--gold-light); }
 
-  /* ORDER FORM */
-  #order { background: var(--cream); }
+  #order { background: var(--cream); padding-bottom: 100px; }
+
+  .order-summary-box {
+    background: white; border: 2px solid var(--border);
+    border-radius: 14px; padding: 24px;
+    margin-bottom: 28px; max-width: 720px;
+    display: none;
+  }
+  .order-summary-box h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px; margin-bottom: 16px; color: var(--blue);
+  }
+  .order-item-row {
+    display: flex; justify-content: space-between;
+    padding: 9px 0; border-bottom: 1px solid var(--border);
+    font-size: 14px;
+  }
+  .order-item-row:last-child {
+    border: none; font-weight: 700;
+    font-size: 15px; padding-top: 14px;
+  }
 
   .form-grid {
     display: grid; grid-template-columns: 1fr 1fr;
     gap: 20px; max-width: 720px;
   }
-
   .form-group { display: flex; flex-direction: column; gap: 6px; }
   .form-group.full { grid-column: 1 / -1; }
 
   label {
-    font-size: 12px; font-weight: 500;
-    text-transform: uppercase; letter-spacing: 1px;
+    font-size: 11px; font-weight: 600;
+    text-transform: uppercase; letter-spacing: 1.2px;
     color: var(--muted);
   }
 
   input, select, textarea {
-    border: 1.5px solid var(--border);
+    border: 2px solid var(--border);
     border-radius: 8px; padding: 12px 16px;
     font-family: 'DM Sans', sans-serif;
     font-size: 15px; color: var(--text);
     background: white; outline: none;
-    transition: border-color 0.2s;
-    width: 100%;
+    transition: border-color 0.2s; width: 100%;
   }
+  input:focus, select:focus, textarea:focus { border-color: var(--blue); }
+  textarea { resize: vertical; min-height: 80px; }
 
-  input:focus, select:focus, textarea:focus {
-    border-color: var(--blue);
+  .empty-msg {
+    background: #FFF3CD; border: 1.5px solid #FFD97D;
+    border-radius: 8px; padding: 14px 20px;
+    font-size: 14px; color: #7A5C00;
+    margin-bottom: 20px; max-width: 720px;
+    display: none;
   }
-
-  textarea { resize: vertical; min-height: 90px; }
-
-  .order-summary-box {
-    background: white; border: 1.5px solid var(--border);
-    border-radius: 12px; padding: 24px;
-    margin-bottom: 24px; max-width: 720px;
-  }
-
-  .order-summary-box h3 {
-    font-family: 'Playfair Display', serif;
-    font-size: 18px; margin-bottom: 16px; color: var(--blue);
-  }
-
-  .order-item-row {
-    display: flex; justify-content: space-between;
-    padding: 8px 0; border-bottom: 1px solid var(--border);
-    font-size: 14px;
-  }
-  .order-item-row:last-child { border: none; font-weight: 700; font-size: 15px; }
 
   .submit-btn {
     background: var(--blue); color: white;
-    border: none; padding: 16px 40px;
+    border: none; padding: 16px;
     border-radius: 8px; font-family: 'DM Sans', sans-serif;
     font-size: 16px; font-weight: 600; cursor: pointer;
     transition: background 0.2s; width: 100%; max-width: 720px;
+    margin-top: 10px;
   }
   .submit-btn:hover { background: var(--blue-light); }
 
-  /* SUCCESS */
   #success {
     display: none; text-align: center;
-    padding: 80px 48px;
-    background: var(--milk);
+    padding: 100px 48px; background: var(--milk);
   }
   #success.visible { display: block; }
   .success-icon { font-size: 72px; margin-bottom: 20px; }
@@ -372,53 +294,63 @@
     font-family: 'Playfair Display', serif;
     font-size: 36px; color: var(--blue); margin-bottom: 12px;
   }
-  .success-text { color: var(--muted); font-size: 16px; max-width: 400px; margin: 0 auto 32px; }
+  .success-text {
+    color: var(--muted); font-size: 16px;
+    max-width: 420px; margin: 0 auto 32px; line-height: 1.7;
+  }
+  .success-btn {
+    background: var(--blue); color: white;
+    border: none; padding: 14px 36px;
+    border-radius: 8px; font-family: 'DM Sans', sans-serif;
+    font-size: 15px; font-weight: 600; cursor: pointer;
+    transition: background 0.2s;
+  }
+  .success-btn:hover { background: var(--blue-light); }
 
-  /* FOOTER */
   footer {
-    background: var(--blue);
-    color: rgba(255,255,255,0.6);
+    background: var(--blue); color: rgba(255,255,255,0.6);
     padding: 40px 48px;
     display: flex; justify-content: space-between;
-    align-items: center; flex-wrap: wrap; gap: 16px;
+    align-items: flex-start; flex-wrap: wrap; gap: 24px;
   }
-  footer .logo-text { color: white; font-size: 16px; }
-  footer p { font-size: 13px; }
-  .contact-info { font-size: 13px; color: rgba(255,255,255,0.7); }
-  .contact-info a { color: var(--gold-light); text-decoration: none; }
+  .f-brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px; color: white; margin-bottom: 6px;
+  }
+  footer p { font-size: 13px; line-height: 1.9; }
+  footer a { color: var(--gold-light); text-decoration: none; }
 
   @media (max-width: 768px) {
     .nav { padding: 16px 20px; }
-    .hero-body { grid-template-columns: 1fr; padding: 40px 20px 60px; }
+    .hero-body { grid-template-columns: 1fr; padding: 36px 20px 56px; }
     .hero-visual { display: none; }
     section { padding: 48px 20px; }
     .form-grid { grid-template-columns: 1fr; }
     .form-group.full { grid-column: 1; }
     #cart-bar { padding: 14px 20px; }
-    footer { padding: 32px 20px; flex-direction: column; align-items: flex-start; }
+    footer { padding: 32px 20px; flex-direction: column; }
   }
 </style>
 </head>
 <body>
 
-<!-- HEADER -->
 <header>
   <div class="hero-pattern"></div>
   <nav class="nav">
     <div class="logo">
       <div class="logo-badge">DDC</div>
-      <div class="logo-text">
+      <div class="logo-name">
         Dairy Development Corp.
-        <span>Order Fresh Milk · Kathmandu</span>
+        <span>Order Online · Kathmandu</span>
       </div>
     </div>
     <a href="#order" class="nav-cta">Place Order</a>
   </nav>
   <div class="hero-body">
     <div class="hero-text">
-      <p class="section-label">Government of Nepal · Est. 2021 BS</p>
-      <h1>Fresh Dairy<em>Delivered to Your Door</em></h1>
-      <p>Order authentic DDC milk and dairy products online. Pure, fresh, and trusted by Kathmandu households for generations.</p>
+      <p class="section-label">दुग्ध विकास संस्थान · Government of Nepal</p>
+      <h1>Pure DDC Dairy<em>Delivered Fresh</em></h1>
+      <p>Order authentic DDC milk and dairy products online. Pure, government-certified, and trusted by Kathmandu households for generations.</p>
       <div class="hero-badges">
         <span class="badge">🥛 100% Pure</span>
         <span class="badge">🚚 Daily Delivery</span>
@@ -426,57 +358,45 @@
       </div>
     </div>
     <div class="hero-visual">
-      <div class="milk-illustration">
-        <div class="milk-drops"></div>
-        <div class="milk-drops"></div>
-        <div class="milk-drops"></div>
-      </div>
+      <div class="milk-circle">🥛</div>
     </div>
   </div>
 </header>
 
-<!-- PRODUCTS -->
 <section id="products">
-  <p class="section-label">Our Products</p>
-  <h2 class="section-title">Choose What You'd Like</h2>
-
-  <div class="category-tabs">
-    <button class="tab active" onclick="filterCategory('all', this)">All</button>
-    <button class="tab" onclick="filterCategory('milk', this)">🥛 Milk</button>
-    <button class="tab" onclick="filterCategory('fat', this)">🧈 Ghee & Butter</button>
-    <button class="tab" onclick="filterCategory('cultured', this)">🫙 Yogurt & More</button>
-    <button class="tab" onclick="filterCategory('sweet', this)">🍮 Sweets</button>
-    <button class="tab" onclick="filterCategory('cheese', this)">🧀 Cheese</button>
-  </div>
-
+  <p class="section-label">Official DDC Products</p>
+  <h2 class="section-title">Select Products to Order</h2>
   <div class="products-grid" id="productsGrid"></div>
 </section>
 
-<!-- ORDER FORM -->
 <section id="order">
   <p class="section-label">Place Your Order</p>
   <h2 class="section-title">Delivery Details</h2>
 
-  <div class="order-summary-box" id="orderSummaryBox" style="display:none">
-    <h3>Your Order</h3>
+  <div class="order-summary-box" id="orderSummaryBox">
+    <h3>🛒 Your Selected Items</h3>
     <div id="orderItemsList"></div>
+  </div>
+
+  <div class="empty-msg" id="emptyMsg">
+    ⚠️ You have not selected any products yet. Please scroll up and add items first.
   </div>
 
   <div class="form-grid">
     <div class="form-group">
-      <label>Full Name</label>
-      <input type="text" id="fname" placeholder="Ramesh Sharma" required/>
+      <label>Full Name *</label>
+      <input type="text" id="fname" placeholder="Ramesh Sharma"/>
     </div>
     <div class="form-group">
-      <label>Phone Number</label>
-      <input type="tel" id="fphone" placeholder="98XXXXXXXX" required/>
+      <label>Phone Number *</label>
+      <input type="tel" id="fphone" placeholder="98XXXXXXXX"/>
     </div>
     <div class="form-group full">
-      <label>Delivery Address</label>
-      <input type="text" id="faddress" placeholder="Thamel, Kathmandu (Ward No., Street Name)" required/>
+      <label>Delivery Address *</label>
+      <input type="text" id="faddress" placeholder="Ward No., Street, Locality"/>
     </div>
     <div class="form-group">
-      <label>Delivery Area</label>
+      <label>Delivery Area *</label>
       <select id="farea">
         <option value="">Select area...</option>
         <option>Thamel</option>
@@ -486,6 +406,8 @@
         <option>Maharajgunj</option>
         <option>Chabahil</option>
         <option>Koteshwor</option>
+        <option>Kalanki</option>
+        <option>Naxal</option>
         <option>Patan / Lalitpur</option>
         <option>Bhaktapur</option>
         <option>Kirtipur</option>
@@ -493,7 +415,7 @@
       </select>
     </div>
     <div class="form-group">
-      <label>Preferred Delivery Time</label>
+      <label>Preferred Delivery Time *</label>
       <select id="ftime">
         <option value="">Select time...</option>
         <option>Morning (6 AM – 9 AM)</option>
@@ -521,25 +443,22 @@
     </div>
     <div class="form-group full">
       <label>Special Instructions (optional)</label>
-      <textarea id="fnotes" placeholder="Leave at gate, call before delivery, etc."></textarea>
+      <textarea id="fnotes" placeholder="e.g. Leave at gate, call before arrival..."></textarea>
     </div>
   </div>
 
-  <br/>
-  <button class="submit-btn" onclick="submitOrder()">🛒 Confirm Order</button>
+  <button class="submit-btn" onclick="submitOrder()">✅ Confirm Order</button>
 </section>
 
-<!-- SUCCESS -->
 <div id="success">
   <div class="success-icon">🎉</div>
-  <h2 class="success-title">Order Placed!</h2>
-  <p class="success-text">Thank you! Your DDC order has been received. We'll call you shortly to confirm delivery details.</p>
-  <a href="#products" onclick="resetOrder()" class="nav-cta" style="display:inline-block; padding:14px 32px; font-size:15px;">Order Again</a>
+  <h2 class="success-title">Order Confirmed!</h2>
+  <p class="success-text">Thank you! Your DDC order has been received. We will contact you on your phone number shortly to confirm delivery.</p>
+  <button class="success-btn" onclick="resetOrder()">Order Again</button>
 </div>
 
-<!-- CART BAR -->
 <div id="cart-bar">
-  <div class="cart-summary">
+  <div class="cart-info">
     <span id="cartCount">0 items</span>
     <strong id="cartTotal">Rs. 0</strong>
   </div>
@@ -548,60 +467,102 @@
   </button>
 </div>
 
-<!-- FOOTER -->
 <footer>
   <div>
-    <div class="logo-text" style="font-family:'Playfair Display',serif; color:white; font-size:18px; margin-bottom:6px;">DDC Milk Order</div>
-    <p>Unofficial ordering portal — Kathmandu</p>
+    <div class="f-brand">DDC Nepal — Online Order</div>
+    <p>Unofficial ordering portal for Kathmandu</p>
+    <p style="font-size:12px; margin-top:4px;">Products & prices sourced from ddc.gov.np</p>
   </div>
-  <div class="contact-info">
-    <p>DDC Head Office: Lainchour, Kathmandu</p>
+  <div>
+    <p><strong style="color:white;">DDC Head Office</strong></p>
+    <p>Lainchour, Kathmandu, Nepal</p>
     <p>Phone: <a href="tel:014511710">01-4511710</a></p>
+    <p>Phone: <a href="tel:014513696">01-4513696</a></p>
     <p>Email: <a href="mailto:info@dairydev.com.np">info@dairydev.com.np</a></p>
   </div>
 </footer>
 
 <script>
+// Exact 7 products from https://www.ddc.gov.np/products
 const products = [
-  { id:1, name:'Fresh Milk', emoji:'🥛', desc:'Pure pasteurized cow/buffalo milk', price:70, unit:'per litre', category:'milk' },
-  { id:2, name:'DDC Fresh 200ml', emoji:'🍼', desc:'Small bottle, great for kids', price:25, unit:'per bottle', category:'milk' },
-  { id:3, name:'Poly Ghee', emoji:'🧈', desc:'Clarified butter in polypack', price:1150, unit:'per pack', category:'fat' },
-  { id:4, name:'Yak Ghee', emoji:'🫙', desc:'Premium Himalayan yak ghee', price:1400, unit:'per jar', category:'fat' },
-  { id:5, name:'Butter Block', emoji:'🧈', desc:'Fresh dairy butter block', price:320, unit:'per block', category:'fat' },
-  { id:6, name:'Fresh Cream', emoji:'🍦', desc:'Rich and smooth dairy cream', price:200, unit:'per pack', category:'fat' },
-  { id:7, name:'Yogurt / Dahi', emoji:'🥣', desc:'Classic fresh set yogurt', price:170, unit:'per cup', category:'cultured' },
-  { id:8, name:'Probiotic Yogurt', emoji:'🫙', desc:'Good bacteria for digestion', price:200, unit:'per cup', category:'cultured' },
-  { id:9, name:'Mango Fruit Yogurt', emoji:'🥭', desc:'Smooth mango-flavored yogurt', price:200, unit:'per cup', category:'cultured' },
-  { id:10, name:'Strawberry Yogurt', emoji:'🍓', desc:'Fruity strawberry yogurt', price:200, unit:'per cup', category:'cultured' },
-  { id:11, name:'DDC Mohi', emoji:'🥤', desc:'Traditional buttermilk, refreshing', price:35, unit:'per pack', category:'cultured' },
-  { id:12, name:'Rasbari', emoji:'🍮', desc:'Soft juicy milk sweet balls', price:290, unit:'per pack', category:'sweet' },
-  { id:13, name:'Lalmohan', emoji:'🟠', desc:'Classic Nepali gulab jamun', price:250, unit:'per pack', category:'sweet' },
-  { id:14, name:'Paneer', emoji:'🧀', desc:'Fresh cottage cheese for cooking', price:350, unit:'per 250g', category:'cheese' },
-  { id:15, name:'Mozzarella Cheese', emoji:'🍕', desc:'Stretchy cheese for pizza & more', price:600, unit:'per 200g', category:'cheese' },
-  { id:16, name:'Kanchan Cheese', emoji:'🧀', desc:'DDC branded processed cheese', price:500, unit:'per block', category:'cheese' },
-  { id:17, name:'Yak Cheese', emoji:'🏔️', desc:'Authentic Himalayan yak cheese', price:800, unit:'per 200g', category:'cheese' },
+  {
+    id: 1,
+    name: 'Fresh Milk',
+    emoji: '🥛',
+    desc: 'Fresh Milk – Taste the Goodness! Refreshing, creamy, and full of nutrition. Gives you the energy and taste you deserve.',
+    price: 70,
+    unit: 'per litre'
+  },
+  {
+    id: 2,
+    name: 'Standard Milk',
+    emoji: '🍼',
+    desc: 'Processed Milk – pasteurized standard milk from DDC.',
+    price: 49,
+    unit: 'per pack'
+  },
+  {
+    id: 3,
+    name: 'Poly Ghee',
+    emoji: '🧈',
+    desc: 'Clarified butter sold in polypack packaging. Pure ghee from Dairy Development Corporation.',
+    price: 1150,
+    unit: 'per pack'
+  },
+  {
+    id: 4,
+    name: 'Yogurt Jar',
+    emoji: '🥣',
+    desc: 'Excellent source of calcium, protein, and B vitamins (B2 and B12). Also contains phosphorus, potassium, and magnesium.',
+    price: 170,
+    unit: 'per jar'
+  },
+  {
+    id: 5,
+    name: 'Mohi',
+    emoji: '🥤',
+    desc: 'DDC Mohi – The Taste of Purity! Cool, refreshing, and naturally healthy. Keeps you energized all day long.',
+    price: 35,
+    unit: 'per pack'
+  },
+  {
+    id: 6,
+    name: 'Rasbari',
+    emoji: '🍮',
+    desc: "DDC Rasbari – Sweetness You Can't Resist! Soft, juicy, and filled with pure delight. Melts in your mouth with every bite.",
+    price: 290,
+    unit: 'per pack'
+  },
+  {
+    id: 7,
+    name: 'Ice Cream',
+    emoji: '🍦',
+    desc: 'DDC Fresh Ice Cream in five irresistible flavors: Vanilla, Butterscotch, Chocolate, Chocolate Crunch, and Strawberry.',
+    price: 250,
+    unit: 'per pack'
+  }
 ];
 
-let cart = {}; // productId -> quantity
-let currentCategory = 'all';
+let cart = {};
 
-function renderProducts(category) {
+function renderProducts() {
   const grid = document.getElementById('productsGrid');
-  const filtered = category === 'all' ? products : products.filter(p => p.category === category);
-  grid.innerHTML = filtered.map(p => `
+  grid.innerHTML = products.map(p => `
     <div class="product-card ${cart[p.id] > 0 ? 'selected' : ''}" id="card-${p.id}">
       <span class="product-emoji">${p.emoji}</span>
       <div class="product-name">${p.name}</div>
       <div class="product-desc">${p.desc}</div>
       <div class="product-footer">
-        <span class="product-price">Rs. ${p.price.toLocaleString()}</span>
+        <div class="product-price-block">
+          <div class="product-price">Rs. ${p.price.toLocaleString()}</div>
+          <div class="product-unit">${p.unit}</div>
+        </div>
         <div class="qty-control">
           <button class="qty-btn" onclick="changeQty(${p.id}, -1)">−</button>
           <span class="qty-num" id="qty-${p.id}">${cart[p.id] || 0}</span>
           <button class="qty-btn" onclick="changeQty(${p.id}, 1)">+</button>
         </div>
       </div>
-      <div style="font-size:11px; color:var(--muted); margin-top:6px;">${p.unit}</div>
     </div>
   `).join('');
 }
@@ -609,90 +570,86 @@ function renderProducts(category) {
 function changeQty(id, delta) {
   cart[id] = Math.max(0, (cart[id] || 0) + delta);
   if (cart[id] === 0) delete cart[id];
+  renderProducts();
   updateCartBar();
-  renderProducts(currentCategory);
+  updateOrderSummary();
 }
 
-function updateCartBar() {
-  const items = Object.keys(cart).length;
-  const total = Object.entries(cart).reduce((sum, [id, qty]) => {
+function getTotal() {
+  return Object.entries(cart).reduce((sum, [id, qty]) => {
     const p = products.find(x => x.id == id);
     return sum + p.price * qty;
   }, 0);
-
-  document.getElementById('cartCount').textContent = `${items} item${items !== 1 ? 's' : ''}`;
-  document.getElementById('cartTotal').textContent = `Rs. ${total.toLocaleString()}`;
-
-  const bar = document.getElementById('cart-bar');
-  if (items > 0) bar.classList.add('visible');
-  else bar.classList.remove('visible');
-
-  // Update order summary
-  const box = document.getElementById('orderSummaryBox');
-  const list = document.getElementById('orderItemsList');
-  if (items > 0) {
-    box.style.display = 'block';
-    let rows = Object.entries(cart).map(([id, qty]) => {
-      const p = products.find(x => x.id == id);
-      return `<div class="order-item-row"><span>${p.emoji} ${p.name} × ${qty}</span><span>Rs. ${(p.price * qty).toLocaleString()}</span></div>`;
-    }).join('');
-    rows += `<div class="order-item-row"><span>Total</span><span>Rs. ${total.toLocaleString()}</span></div>`;
-    list.innerHTML = rows;
-  } else {
-    box.style.display = 'none';
-  }
 }
 
-function filterCategory(cat, btn) {
-  currentCategory = cat;
-  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
-  btn.classList.add('active');
-  renderProducts(cat);
+function updateCartBar() {
+  const count = Object.values(cart).reduce((a, b) => a + b, 0);
+  const total = getTotal();
+  document.getElementById('cartCount').textContent = `${count} item${count !== 1 ? 's' : ''} selected`;
+  document.getElementById('cartTotal').textContent = `Rs. ${total.toLocaleString()}`;
+  const bar = document.getElementById('cart-bar');
+  if (count > 0) bar.classList.add('visible');
+  else bar.classList.remove('visible');
+}
+
+function updateOrderSummary() {
+  const box = document.getElementById('orderSummaryBox');
+  const list = document.getElementById('orderItemsList');
+  if (Object.keys(cart).length === 0) { box.style.display = 'none'; return; }
+  box.style.display = 'block';
+  const rows = Object.entries(cart).map(([id, qty]) => {
+    const p = products.find(x => x.id == id);
+    return `<div class="order-item-row">
+      <span>${p.emoji} ${p.name} × ${qty}</span>
+      <span>Rs. ${(p.price * qty).toLocaleString()}</span>
+    </div>`;
+  }).join('');
+  const total = `<div class="order-item-row">
+    <span>Total</span><span>Rs. ${getTotal().toLocaleString()}</span>
+  </div>`;
+  list.innerHTML = rows + total;
 }
 
 function submitOrder() {
-  const name = document.getElementById('fname').value.trim();
-  const phone = document.getElementById('fphone').value.trim();
-  const address = document.getElementById('faddress').value.trim();
-  const area = document.getElementById('farea').value;
-  const time = document.getElementById('ftime').value;
-
-  if (!name || !phone || !address || !area || !time) {
-    alert('कृपया सबै आवश्यक फिल्डहरू भर्नुहोस्।\nPlease fill in all required fields.');
-    return;
-  }
-
+  const emptyMsg = document.getElementById('emptyMsg');
   if (Object.keys(cart).length === 0) {
-    alert('Please select at least one product.');
+    emptyMsg.style.display = 'block';
     document.getElementById('products').scrollIntoView({ behavior: 'smooth' });
     return;
   }
-
-  // Show success
+  emptyMsg.style.display = 'none';
+  const name    = document.getElementById('fname').value.trim();
+  const phone   = document.getElementById('fphone').value.trim();
+  const address = document.getElementById('faddress').value.trim();
+  const area    = document.getElementById('farea').value;
+  const time    = document.getElementById('ftime').value;
+  if (!name || !phone || !address || !area || !time) {
+    alert('कृपया सबै आवश्यक फिल्डहरू भर्नुहोस्।\nPlease fill all required fields marked with *.');
+    return;
+  }
   document.getElementById('order').style.display = 'none';
   document.getElementById('products').style.display = 'none';
-  document.getElementById('success').classList.add('visible');
   document.getElementById('cart-bar').classList.remove('visible');
+  document.getElementById('success').classList.add('visible');
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
 function resetOrder() {
   cart = {};
+  ['fname','fphone','faddress','fnotes'].forEach(id => document.getElementById(id).value = '');
+  document.getElementById('farea').value = '';
+  document.getElementById('ftime').value = '';
+  document.getElementById('fpayment').selectedIndex = 0;
+  document.getElementById('ffreq').selectedIndex = 0;
   document.getElementById('order').style.display = 'block';
   document.getElementById('products').style.display = 'block';
   document.getElementById('success').classList.remove('visible');
-  document.getElementById('fname').value = '';
-  document.getElementById('fphone').value = '';
-  document.getElementById('faddress').value = '';
-  document.getElementById('farea').value = '';
-  document.getElementById('ftime').value = '';
-  document.getElementById('fnotes').value = '';
-  renderProducts('all');
+  document.getElementById('orderSummaryBox').style.display = 'none';
+  renderProducts();
   updateCartBar();
 }
 
-// Init
-renderProducts('all');
+renderProducts();
 </script>
 </body>
 </html>
